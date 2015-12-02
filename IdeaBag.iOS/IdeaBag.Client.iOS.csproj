@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{405A0C4E-B086-43A7-812E-6F543D15A716}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>IdeaBag.Client.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>IdeaBagiOS_Test2</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchI18n>
+    </MtouchI18n>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>i386</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="Calabash">
+      <HintPath>..\packages\Xamarin.TestCloud.Agent.0.13.0\lib\Xamarin.iOS10\Calabash.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook">
+      <HintPath>..\packages\Xamarin.Facebook.iOS.4.4.0.0\lib\Xamarin.iOS10\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Data.Sqlite" />
+    <Reference Include="System.Data" />
+    <Reference Include="IdeaBag.Portable.Data">
+      <HintPath>..\Source_References\IdeaBag.Portable.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="IdeaBag.Portable.Utility">
+      <HintPath>..\Source_References\IdeaBag.Portable.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="IdeaBag.Portable.ViewModels">
+      <HintPath>..\Source_References\IdeaBag.Portable.ViewModels.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\Source_References\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
+    <InterfaceDefinition Include="Main.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="ViewController.designer.cs">
+      <DependentUpon>LoginViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginViewController.cs" />
+    <Compile Include="LoginViewController.designer.cs">
+      <DependentUpon>LoginViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\Login\LoginViewModel.cs" />
+    <Compile Include="ViewModels\Login\SignupViewModel.cs" />
+    <Compile Include="SignupViewController.cs" />
+    <Compile Include="SignupViewController.designer.cs">
+      <DependentUpon>SignupViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQLite.cs" />
+    <Compile Include="SQLiteAsync.cs" />
+    <Compile Include="DataAccess\Rest\RestDataManager.cs" />
+    <Compile Include="DataAccess\Database\DatabaseHelper.cs" />
+    <Compile Include="DataAccess\Database\DatabaseManager.cs" />
+    <Compile Include="DataAccess\Database\DatabaseScripts.cs" />
+    <Compile Include="Models\ContactModel.cs" />
+    <Compile Include="MainNavigation.cs" />
+    <Compile Include="MainNavigation.designer.cs">
+      <DependentUpon>MainNavigation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotificationsView.cs" />
+    <Compile Include="NotificationsView.designer.cs">
+      <DependentUpon>NotificationsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Navigation\MyTabbedController.cs" />
+    <Compile Include="Views\LoginViewController.cs" />
+    <Compile Include="Views\TestTabBarController.designer.cs">
+      <DependentUpon>RootTabBarController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\IdeasViewController.cs" />
+    <Compile Include="Views\IdeasViewController.designer.cs">
+      <DependentUpon>IdeasViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NotificationsViewController.cs" />
+    <Compile Include="Views\NotificationsViewController.designer.cs">
+      <DependentUpon>NotificationsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RootTabBarController.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <XamarinComponentReference Include="facebookios">
+      <Version>4.4.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Contents.json" />
+    <BundleResource Include="Resources\Images.xcassets\notification-tab.imageset\Contents.json" />
+    <BundleResource Include="Resources\Images.xcassets\notification-tab-selected.imageset\Contents.json" />
+    <BundleResource Include="Resources\Images.xcassets\notification-tab.imageset\tabicon-notifications.pdf" />
+    <BundleResource Include="Resources\Images.xcassets\notification-tab-selected.imageset\tabicon-notifications-selected.pdf" />
+    <BundleResource Include="Resources\Images.xcassets\ideas-tab.imageset\Contents.json" />
+    <BundleResource Include="Resources\Images.xcassets\ideas-tab.imageset\tabicon-ideas.pdf" />
+    <BundleResource Include="Resources\Images.xcassets\ideas-tab-selected.imageset\Contents.json" />
+    <BundleResource Include="Resources\Images.xcassets\ideas-tab-selected.imageset\tabicon-ideas-selected.pdf" />
+    <BundleResource Include="Resources\Images.xcassets\notification-tab.imageset\notifications-icon.pdf" />
+    <BundleResource Include="Resources\Images.xcassets\settings-tab.imageset\Contents.json" />
+    <BundleResource Include="Resources\Images.xcassets\settings-tab.imageset\tabicon-settings.pdf" />
+    <BundleResource Include="Resources\Images.xcassets\friends-tab.imageset\Contents.json" />
+    <BundleResource Include="Resources\Images.xcassets\friends-tab.imageset\tabicon-friends.pdf" />
+    <BundleResource Include="Resources\Images.xcassets\map-tab.imageset\Contents.json" />
+    <BundleResource Include="Resources\Images.xcassets\map-tab.imageset\tabicon-map.pdf" />
+    <BundleResource Include="Resources\Images.xcassets\btnLogin-unselected.imageset\Contents.json" />
+    <BundleResource Include="Resources\Images.xcassets\btnLogin-unselected.imageset\btn-Login-unselected.pdf" />
+    <BundleResource Include="Resources\Images.xcassets\btnLogin-selected.imageset\Contents.json" />
+    <BundleResource Include="Resources\Images.xcassets\btnLogin-selected.imageset\btn-Login-selected.pdf" />
+    <BundleResource Include="Resources\Images.xcassets\login-form-background.imageset\Contents.json" />
+    <BundleResource Include="Resources\Images.xcassets\login-form-background.imageset\Login-Form-BG.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
+    <Folder Include="ViewModels\Login\" />
+    <Folder Include="DataAccess\" />
+    <Folder Include="DataAccess\Rest\" />
+    <Folder Include="DataAccess\Database\" />
+    <Folder Include="Models\" />
+    <Folder Include="Navigation\" />
+    <Folder Include="Views\" />
+    <Folder Include="Resources\Images.xcassets\Login-Logo.imageset\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImages.launchimage\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Login-Logo.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Login-Logo.imageset\Login-Logo.pdf" />
+  </ItemGroup>
+</Project>
