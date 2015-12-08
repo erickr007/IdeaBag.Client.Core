@@ -172,6 +172,8 @@
     <BundleResource Include="Resources\Images.xcassets\btnLogin-selected.imageset\btn-Login-selected.pdf" />
     <BundleResource Include="Resources\Images.xcassets\login-form-background.imageset\Contents.json" />
     <BundleResource Include="Resources\Images.xcassets\login-form-background.imageset\Login-Form-BG.pdf" />
+    <BundleResource Include="Resources\Images.xcassets\Facebook-login.imageset\Contents.json" />
+    <BundleResource Include="Resources\Images.xcassets\Facebook-login.imageset\Facebook-Logo.pdf" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModels\" />

@@ -60,7 +60,6 @@ namespace IdeaBag.Client.iOS
 			Window.MakeKeyAndVisible ();
 			return true;
 
-
 			//return ApplicationDelegate.SharedInstance.FinishedLaunching (application, launchOptions);
 		}
 

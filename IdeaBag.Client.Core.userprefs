@@ -1,6 +1,11 @@
 ﻿<Properties StartupItem="IdeaBag.Portable/IdeaBag.Portable.Data.csproj" GitUserInfo="UsingGIT">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="IdeaBag.iOS/Views/LoginViewController.cs" Line="46" Column="47" />
+      <File FileName="IdeaBag.iOS/AppDelegate.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/eric/Projects/IdeaBag.Core/IdeaBag.iOS_Test2/ViewController.cs" line="93" column="1" />
