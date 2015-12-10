@@ -11,7 +11,7 @@ namespace IdeaBag.Client.iOS.Views
 		}
 
 
-		#region Design Methods
+		#region View Builder Methods
 
 		private void BuildLayout(){
 			this.View.BackgroundColor = UIColor.Red;
@@ -90,7 +90,7 @@ namespace IdeaBag.Client.iOS.Views
 			this.View.Add (btnForgotPassword);
 
 			//- Facebook login
-			UIButton btnFacebookLogin = new UIButton(new CoreGraphics.CGRect(73, 573, 228, 32));
+			UIButton btnFacebookLogin = new UIButton(new CoreGraphics.CGRect(73, 623, 228, 32));
 			btnFacebookLogin.Font = UIFont.FromName ("Avenir Book", 18);
 			btnFacebookLogin.SetTitle ("Login with Facebook", UIControlState.Normal);
 			btnFacebookLogin.SetTitleColor (UIColor.White, UIControlState.Normal);

@@ -132,15 +132,12 @@
     <Compile Include="Views\TestTabBarController.designer.cs">
       <DependentUpon>RootTabBarController.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\IdeasViewController.cs" />
-    <Compile Include="Views\IdeasViewController.designer.cs">
-      <DependentUpon>IdeasViewController.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\NotificationsViewController.cs" />
     <Compile Include="Views\NotificationsViewController.designer.cs">
       <DependentUpon>NotificationsViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\RootTabBarController.cs" />
+    <Compile Include="Views\IdeasViewController.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>

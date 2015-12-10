@@ -3,7 +3,7 @@ using System;
 using System.CodeDom.Compiler;
 using UIKit;
 
-namespace IdeaBag.Client.iOS
+namespace IdeaBag.Client.iOS.Views
 {
 	partial class RootTabBarController : UITabBarController, IUITabBarControllerDelegate
 	{
@@ -25,7 +25,7 @@ namespace IdeaBag.Client.iOS
 			//this.TabBar.Center = new CoreGraphics.CGPoint (0, 10);
 
 			//- Settings
-			_settingsTab = new IdeaBag.Client.iOS.Views.LoginViewController();
+			_settingsTab = new IdeaBag.Client.iOS.Views.IdeasViewController();
 			_settingsTab.TabBarItem = new UITabBarItem("",
 				UIImage.FromBundle("settings-tab").ImageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal),
 				UIImage.FromBundle("settings-tab").ImageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
