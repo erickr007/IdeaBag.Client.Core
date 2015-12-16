@@ -3,20 +3,24 @@ using UIKit;
 
 namespace IdeaBag.Client.iOS.Views
 {
-	public class LoginViewController : UIViewController
+	public class CreateAccountViewController : UIViewController
 	{
-		public LoginViewController ()
+		#region Constructor
+
+		public CreateAccountViewController ()
 		{
 			BuildLayout ();
 		}
+
+		#endregion
 
 
 		#region View Builder Methods
 
 		private void BuildLayout(){
 			this.View.BackgroundColor = UIColor.Red;
-
-			//- Add Logo
+			
+			//- Logo
 			UIImage ideabagLogo = UIImage.FromBundle("Login-Logo").ImageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal);
 			UIImageView ideabagLogView = new UIImageView (ideabagLogo);
 			ideabagLogView.Frame =  new CoreGraphics.CGRect (97, 31, 184, 294);
@@ -40,15 +44,15 @@ namespace IdeaBag.Client.iOS.Views
 			usernameBackgroundView.Frame = new CoreGraphics.CGRect (0, 366, 380, 50);
 
 
-			UITextField tfUsername = new UITextField (new CoreGraphics.CGRect (16, 376, 343, 30));
-			tfUsername.Font = UIFont.FromName ("Avenir Book", 17);
-			tfUsername.Alpha = 1;
-			tfUsername.BackgroundColor = UIColor.Clear;
-			tfUsername.TextColor = UIColor.White;
-			tfUsername.Placeholder = "Email or Username";
+			UITextField tfEmail = new UITextField (new CoreGraphics.CGRect (16, 376, 343, 30));
+			tfEmail.Font = UIFont.FromName ("Avenir Book", 17);
+			tfEmail.Alpha = 1;
+			tfEmail.BackgroundColor = UIColor.Clear;
+			tfEmail.TextColor = UIColor.White;
+			tfEmail.Placeholder = "Email";
 
 			this.View.Add (usernameBackgroundView);
-			this.View.Add (tfUsername);
+			this.View.Add (tfEmail);
 
 			//- Password text box and background
 			UIImageView passwordBackgroundView = new UIImageView(new UIImage (
@@ -67,27 +71,17 @@ namespace IdeaBag.Client.iOS.Views
 			this.View.Add (passwordBackgroundView);
 			this.View.Add (tfPassword);
 
-			//- Login Button
+			//- Create Account Button
 			UIButton btnLogin = new UIButton(new CoreGraphics.CGRect(59, 479, 256, 49));
 			btnLogin.Font = UIFont.FromName ("Avenir Book", 22);
 			btnLogin.BackgroundColor = new UIColor (new CoreGraphics.CGColor (255, 255, 255, 0.85f));
 			btnLogin.SetTitleShadowColor (UIColor.DarkGray, UIControlState.Normal);
 			btnLogin.SetTitleColor (UIColor.Red, UIControlState.Normal);
-			btnLogin.SetTitle ("Login", UIControlState.Normal);
+			btnLogin.SetTitle ("Create Account", UIControlState.Normal);
 			btnLogin.Layer.CornerRadius = 5;
 			btnLogin.ClipsToBounds = true;
 
 			this.View.Add (btnLogin);
-
-
-			//- Forgot password
-			UIButton btnForgotPassword = new UIButton(new CoreGraphics.CGRect(94,556, 187, 30));
-			btnForgotPassword.Font = UIFont.FromName ("Avenir Book", 19);
-			btnForgotPassword.SetTitleColor (UIColor.White, UIControlState.Normal);
-			btnForgotPassword.SetTitleShadowColor (UIColor.DarkTextColor, UIControlState.Normal);
-			btnForgotPassword.SetTitle ("Forgot Password?", UIControlState.Normal);
-
-			this.View.Add (btnForgotPassword);
 
 			//- Facebook login
 			UIButton btnFacebookLogin = new UIButton(new CoreGraphics.CGRect(73, 623, 228, 32));

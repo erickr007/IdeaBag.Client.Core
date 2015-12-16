@@ -128,7 +128,6 @@
       <DependentUpon>NotificationsView.cs</DependentUpon>
     </Compile>
     <Compile Include="Navigation\MyTabbedController.cs" />
-    <Compile Include="Views\LoginViewController.cs" />
     <Compile Include="Views\TestTabBarController.designer.cs">
       <DependentUpon>RootTabBarController.cs</DependentUpon>
     </Compile>
@@ -138,6 +137,8 @@
     </Compile>
     <Compile Include="Views\RootTabBarController.cs" />
     <Compile Include="Views\IdeasViewController.cs" />
+    <Compile Include="Views\Account\LoginViewController.cs" />
+    <Compile Include="Views\Account\CreateAccountViewController.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -171,6 +172,10 @@
     <BundleResource Include="Resources\Images.xcassets\login-form-background.imageset\Login-Form-BG.pdf" />
     <BundleResource Include="Resources\Images.xcassets\Facebook-login.imageset\Contents.json" />
     <BundleResource Include="Resources\Images.xcassets\Facebook-login.imageset\Facebook-Logo.pdf" />
+    <BundleResource Include="Resources\Images.xcassets\btnSignup-selected.imageset\btn-Signup-selected.pdf" />
+    <BundleResource Include="Resources\Images.xcassets\btnSignup-selected.imageset\Contents.json" />
+    <BundleResource Include="Resources\Images.xcassets\btnSignup-unselected.imageset\btn-Signup-unselected.pdf" />
+    <BundleResource Include="Resources\Images.xcassets\btnSignup-unselected.imageset\Contents.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModels\" />
@@ -182,6 +187,7 @@
     <Folder Include="Navigation\" />
     <Folder Include="Views\" />
     <Folder Include="Resources\Images.xcassets\Login-Logo.imageset\" />
+    <Folder Include="Views\Account\" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />

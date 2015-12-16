@@ -56,7 +56,7 @@ namespace IdeaBag.Client.iOS
 
 
 			Window = new UIWindow (UIScreen.MainScreen.Bounds);
-			Window.RootViewController = new IdeaBag.Client.iOS.Views.RootTabBarController ();
+			Window.RootViewController = new IdeaBag.Client.iOS.Views.CreateAccountViewController ();//RootTabBarController ();
 			Window.MakeKeyAndVisible ();
 			return true;
 

@@ -27,18 +27,6 @@
 		<dict>
 			<key>affected-items</key>
 			<array>
-				<string>./notification-tab.imageset/(null)[2d][notifications-icon.pdf]</string>
-			</array>
-			<key>catalog</key>
-			<string>/Users/eric/Projects/IdeaBag.Client.Core/beta/IdeaBag.iOS/Resources/Images.xcassets</string>
-			<key>message</key>
-			<string>The image set "notification-tab" has an unassigned child.</string>
-			<key>type</key>
-			<string>Ambiguous Content</string>
-		</dict>
-		<dict>
-			<key>affected-items</key>
-			<array>
 				<string>./notifications-icon.imageset/(null)[2d][notifications-icon.pdf]</string>
 			</array>
 			<key>catalog</key>
@@ -57,6 +45,18 @@
 			<string>/Users/eric/Projects/IdeaBag.Client.Core/beta/IdeaBag.iOS/Resources/Images.xcassets</string>
 			<key>message</key>
 			<string>The app icon set "AppIcons" has an unassigned child.</string>
+			<key>type</key>
+			<string>Ambiguous Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./notification-tab.imageset/(null)[2d][notifications-icon.pdf]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/eric/Projects/IdeaBag.Client.Core/beta/IdeaBag.iOS/Resources/Images.xcassets</string>
+			<key>message</key>
+			<string>The image set "notification-tab" has an unassigned child.</string>
 			<key>type</key>
 			<string>Ambiguous Content</string>
 		</dict>

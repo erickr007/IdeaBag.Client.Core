@@ -1,6 +1,6 @@
-# Version: 9.1.0.27 (monotouch-9.1.0-branch: 1f068b4)
+# Version: 9.2.1.54 (cycle6-xi: eb4c1ef)
 # [first argument, ignore] # /Users/eric/Projects/IdeaBag.Client.Core/beta/IdeaBag.iOS/mtouch.exe
-/Library/Frameworks/Xamarin.iOS.framework/Versions/9.1.0.27/bin/mtouch \
+/Library/Frameworks/Xamarin.iOS.framework/Versions/9.2.1.54/bin/mtouch \
 	--cache \
 	/Users/eric/Projects/IdeaBag.Client.Core/beta/IdeaBag.iOS/obj/iPhoneSimulator/Debug/mtouch-cache \
 	--sim \
@@ -12,7 +12,7 @@
 	--sdkroot \
 	/Applications/Xcode.app/Contents/Developer \
 	--sdk \
-	9.0 \
+	9.2 \
 	--targetver \
 	8.4 \
 	--new-refcount \
