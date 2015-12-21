@@ -23,15 +23,15 @@ namespace IdeaBag.Client.iOS.Views
 
 			this.View.Add (ideabagLogView);
 
-			//- Login Image
-			UIButton btnLoginImage = new UIButton();
-			btnLoginImage.Frame = new CoreGraphics.CGRect (16, 313, 150, 50);
+			//- Signup Image
+			UIButton btnSignupImage = new UIButton();
+			btnSignupImage.Frame = new CoreGraphics.CGRect (194, 313, 150, 50);
 
-			UIImage loginImage = UIImage.FromBundle ("btnLogin-unselected").ImageWithRenderingMode (UIImageRenderingMode.AlwaysOriginal);
-			UIImageView loginImageView = new UIImageView (loginImage);
-			btnLoginImage.Add (loginImageView);
+			UIImage signupImage = UIImage.FromBundle ("btnSignup-unselected").ImageWithRenderingMode (UIImageRenderingMode.AlwaysOriginal);
+			UIImageView signupImageView = new UIImageView (signupImage);
+			btnSignupImage.Add (signupImageView);
 
-			//this.View.Add (btnLoginImage);
+			this.View.Add (btnSignupImage);
 
 			//- Username text box and background
 			UIImageView usernameBackgroundView = new UIImageView(new UIImage (
