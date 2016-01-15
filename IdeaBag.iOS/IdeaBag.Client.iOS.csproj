@@ -139,6 +139,7 @@
     <Compile Include="Views\IdeasViewController.cs" />
     <Compile Include="Views\Account\LoginViewController.cs" />
     <Compile Include="Views\Account\CreateAccountViewController.cs" />
+    <Compile Include="Views\Account\SelectUsernameViewController.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
